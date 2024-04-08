@@ -36,6 +36,7 @@ export class Base64Editor extends AbstractEditor {
 
     /* Input that holds the base64 string */
     this.input = this.theme.getFormInputField('hidden')
+    this.setInputAttributes([])
     this.container.appendChild(this.input)
 
     /* Don't show uploader if this is readonly */
