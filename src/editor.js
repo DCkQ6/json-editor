@@ -567,7 +567,6 @@ export class AbstractEditor {
       }
     }
     this.notify() // DEVOPS-7690: we need to notify on change to ansure all dependent object will also be updated
-    this.evaluateDependencies()
   }
 
   setValue (value) {

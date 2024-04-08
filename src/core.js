@@ -112,6 +112,7 @@ export class JSONEditor {
 
   getValue () {
     if (!this.ready) throw new Error('JSON Editor not ready yet. Make sure the load method is complete')
+
     return this.root.getValue()
   }
 
@@ -242,6 +243,7 @@ export class JSONEditor {
     window.requestAnimationFrame(() => {
       this.firing_change = false
       if (!this.ready) return
+
       /* Validate and cache results */
       this.validation_results = this.validator.validate(this.root.getValue())
 
@@ -250,6 +252,7 @@ export class JSONEditor {
       } else {
         this.root.showValidationErrors([])
       }
+
       /* Fire change event */
       this.trigger('change')
     })
